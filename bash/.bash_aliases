@@ -5,19 +5,23 @@ alias gc='git commit'
 alias gd='git diff'
 alias go='git checkout '
 
-# enable color support of ls and also ls,grep aliases
-if [ -x /usr/bin/dircolors ]; then
-    test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
-    alias ls='ls --color=auto'
-    #alias dir='dir --color=auto'
-    #alias vdir='vdir --color=auto'
+# ls aliases ====================================================
+# ubuntu
+LS_COLORS=$LS_COLORS:'di=1;32:'; export LS_COLORS
+# mac
+export LSCOLORS=gxBxhxDxfxhxhxhxhxcxcx
 
-    alias grep='grep --color=auto'
-    alias fgrep='fgrep --color=auto'
-    alias egrep='egrep --color=auto'
-fi
-
-# some more ls aliases
 alias ll='ls -alF'
-alias la='ls -A'
+alias la='ls -GFlash'
 alias l='ls -CF'
+alias ls="ls -G"
+
+#make GREP color output
+export GREP_COLOR='1;35;40'
+alias grep="grep --color=auto"
+
+alias untar="tar -zxvf"
+
+# appliactions
+alias eclipse="nohup ECLIPSE_PATH >/dev/null 2>&1 &"
+alias chrome="nohup CHOME_PATH >/dev/null 2>&1 &"
