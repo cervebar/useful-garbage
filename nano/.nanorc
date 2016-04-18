@@ -1,0 +1,3 @@
+set nowrap
+include /Users/cervenkb/.nano/syntax/ALL.nanorc
+include /Users/cervenkb/.nano/syntax/xml.nanorc
