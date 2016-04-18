@@ -1,0 +1,693 @@
+{
+  "qa": [
+          {
+      "category": [
+        "ALGORITMIZATION"
+      ],
+      "Q": " How  Fail  Fast Iterator  come to know that the internal structure is modified ?",
+      "A": [
+       "Iterator read internal data structure (object array) directly . The internal data structure(i.e object array) should not be modified while iterating through the collection. To ensure this it maintains an internal  flag \"mods\" .Iterator checks the \"mods\" flag whenever it gets the next value (using hasNext() method and next() method). Value of mods flag changes whenever there is an structural modification. Thus indicating iterator to throw ConcurrentModificationException."
+       ]
+    },
+        {
+      "category": [
+        "JAVA"
+      ],
+      "Q": "What is syntethic method?",
+      "A": [
+      "It is a Java construct that is introduced by the compiler. Any constructs introduced by the compiler that do not have a corresponding construct in the source code must be marked as synthetic, except for default constructors and the class initialization method." ]
+    },
+    {
+      "category": [
+        "JAVA","JPA","ANNOTATIONS","JAVA EE","JAVA EE 6"
+      ],
+      "Q": "What means @Lob?",
+      "A": ["Specifies that a persistent property or field should be persisted as a large object to a database-supported large object type.
+
+Portable applications should use the Lob annotation when mapping to a database Lob type. The Lob annotation may be used in conjunction with the Basic annotation or the ElementCollection annotation when the element collection value is of basic type. A Lob may be either a binary or character type.
+
+The Lob type is inferred from the type of the persistent field or property, and except for string and character-based types defaults to Blob."]
+      },
+        {
+      "category": [
+        "JAVA","JPA","ANNOTATIONS","JAVA EE","JAVA EE 6"
+      ],
+      "Q": "What are supported types for annotation @Lob?",
+      "A": ["A Lob may be either a binary or character type."]
+      },
+              {
+      "category": [
+        "JAVA","SPRING","ANNOTATIONS","SPRING_ANNOTATIONS"
+      ],
+      "Q": "Annotation @ResponseEntity?",
+      "A": ["Spring: ResponseEntity is meant to represent the entire HTTP response. You can control anything that goes into it: status code, headers, and body."]
+      },
+      {
+      "category": [
+        "JAVA","SPRING","ANNOTATIONS","SPRING_ANNOTATIONS"
+      ],
+      "Q": "Annotation @ResponseBody, @ResponseStatus",
+      "A": ["Spring: @ResponseBody is a marker for the HTTP response body and @ResponseStatus declares the status code of the HTTP response."]
+      },
+      {
+      "category": [
+        "JAVA","SPRING","ANNOTATIONS","SPRING_ANNOTATIONS"
+      ],
+      "Q": "Why is @ResponseStatus annotation not so flexible?",
+      "A": ["@ResponseStatus isn't very flexible. It marks the entire method so you have to be sure that your handler method will always behave the same way. And you still can't set the headers. You'd need the HttpServletResponse or a HttpHeaders parameter. Basically, ResponseEntity lets you do more."]
+      },
+     {
+      "category": [
+        "JAVA","JPA"
+      ],
+      "Q": "What are the default fetchTypes for basic,OneToMany,ManyToMany?",
+      "A": ["Basic - eager, other lazy"]
+      },
+      {
+      "category": [
+        "DEVOPS","LINUX"
+      ],
+      "Q": "What is cgroup?",
+      "A": ["cgroups (abbreviated from control groups) is a Linux kernel feature that limits, accounts for, and isolates the resource usage (CPU, memory, disk I/O, network, etc.) of a collection of processes."]
+      },
+     {
+      "category": [
+        "DATABASES","JAVA"
+      ],
+      "Q": "Differences between JDBC and ODBC",
+      "A": [
+            "JDBC is multi-threaded - ODBC is not multi-threaded (at least not thread safe)",
+            "ODBC is a windows-specific technology - JDBC is specific to Java",
+            "ODBC is procedural and language independent - JDBC is object oriented and language dependent (specific to java)",
+            "JDBC is faster - ODBC is slower",
+            "ODBC is an open interface which can be used by any application to communicate with any database system"
+      ]
+      },
+     {
+      "category": [
+        "LINUX","DEVOPS"
+      ],
+      "Q": "What are the standart commands for look at processors and memory information?",
+      "A": [
+            "cat /proc/cpuinfo",
+            "cat /proc/meminfo",
+            "free -mth",
+            "top",
+            "htop"
+      ]
+      },
+     {
+      "category": [
+        "SHELL","DEVOPS","BASH","UNIX","LINUX"
+      ],
+      "Q": "What means \"#! /bin/bash?\" at the beginning of shell script?",
+      "A": ["In computing, a shebang is the character sequence consisting of the characters number sign and exclamation mark (#!) at the beginning of a script. Under Unix-like operating systems, when a script with a shebang is run as a program, the program loader parses the rest of the script's initial line as an interpreter directive; the specified interpreter program is run instead, passing to it as an argument the path that was initially used when attempting to run the script."]
+      },
+     {
+      "category": [
+        "SHELL","DEVOPS","BASH","UNIX","LINUX"
+      ],
+      "Q": "What does TEE command.",
+      "A": ["reads standard input and writes it to both standard output and one or more files, effectively duplicating its input"]},
+
+     {
+      "category": [
+        "SHELL","DEVOPS"
+      ],
+      "Q": "Mention some other shebangs.",
+      "A": [
+          "#!/bin/sh — Execute the file using sh, the Bourne shell, or a compatible shell",
+          "#!/bin/csh — Execute the file using csh, the C shell, or a compatible shell",
+          "#!/usr/bin/perl -T — Execute using Perl with the option for taint checks",
+          "#!/usr/bin/php — Execute the file using the PHP command line interpreter",
+          "#!/usr/bin/python -O — Execute using Python with optimizations to code",
+          "#!/usr/bin/ruby — Execute using Ruby",
+          "#!/bin/awk",
+          "#!/bin/ksh"
+      ]
+      },
+     {
+      "category": [
+        "LINUX","COMMANDLINE"
+      ],
+      "Q": "How to list all users in Unix systems?",
+      "A": ["Cut -d: f1 /etc/passwd"]
+      },
+     {
+      "category": [
+        "GIT"
+      ],
+      "Q": "What means git pull?",
+      "A": ["In its default mode, git pull is shorthand for git fetch followed by git merge FETCH_HEAD. Git pull runs git fetch with the given parameters and calls git merge to merge the retrieved branch heads into the current branch. With --rebase, it runs git rebase instead of git merge."]
+      },
+           {
+      "category": [
+        "GIT"
+      ],
+      "Q": "How to checkout remote branch?",
+      "A": ["git checkout -b NEW_LOCAL_BRANCH_NAME remotes/origin/REMOTE_BRANCH_NAME. Then is good to set upstream "] },
+      {
+      "category": [
+        "DATABASES"
+      ],
+      "Q": "What is transation mode SERIALIZATION?",
+      "A": ["All statements of the current transaction can only see rows committed before the first query or data-modification statement was executed in this transaction. If a pattern of reads and writes among concurrent serializable transactions would create a situation which could not have occurred for any serial (one-at-a-time) execution of those transactions, one of them will be rolled back with a serialization_failure error."]
+      },
+      {
+      "category": [
+        "VIM","DEVOPS"
+      ],
+      "Q": "What is dd?",
+      "A": ["Cuts the line in buffer, it has side effect."]
+      },
+      {
+      "category": [
+        "LINUX","BASH"
+      ],
+      "Q": "Convert uppercase to lower case.",
+      "A": ["tr '[A-Z]' '[a-z]' < $filename"]
+      },
+      {
+      "category": [
+        "JAVA","ALGORITMIZATION"
+      ],
+      "Q": "What is transation mode SERIALIZATION?",
+      "A": [
+          "Simple values like 0.1 cannot be precisely represented using binary floating point numbers, and the limited precision of floating point numbers means that slight changes in the order of operations or the precision of intermediates can change the result. That means that comparing two floats to see if they are equal is usually not what you want.",
+          "== or != is not good practise",
+          "the results you get will depend on your compiler and your compiler settings",
+          "There is no silver bullet. One of methods can be that their difference goes under some epsilon(error), but the tricky part is to choose epsilon." ]
+      },
+           {
+      "category": [
+        "HADOOP","HIVE"
+      ],
+      "Q": "What is HCatalog?",
+      "A": ["HCatalog is a table and storage management layer for Hadoop that enables users with different data processing tools — Pig, MapReduce — to more easily read and write data on the grid. HCatalog goal is Present users of these tools an abstraction that removes them from details of where and in what format data and metadata are stored"]
+      },
+            {
+      "category": [
+        "DATABASES"
+      ],
+      "Q": "What is transation mode READ COMMITED",
+      "A": ["A statement can only see rows committed before it began. This is the default."]
+      },
+            {
+      "category": [
+        "DATABASES"
+      ],
+      "Q": "What is transation mode REPETABLE READ",
+      "A": ["All statements of the current transaction can only see rows committed before the first query or data-modification statement was executed in this transaction."]
+      },
+      {
+      "category": [
+        "ALGORITMIZATION","DATA_STRUCTURES","BLOOM_FILTER"
+      ],
+      "Q": "What is bloom filter?",
+      "A": ["A Bloom filter is a space-efficient probabilistic data structure, conceived by Burton Howard Bloom in 1970, that is used to test whether an element is a member of a set. False positive matches are possible, but false negatives are not, thus a Bloom filter has a 100% recall rate."]
+      },
+      {
+      "category": [
+        "ALGORITMIZATION","DATA_STRUCTURES","BLOOM_FILTER"
+      ],
+      "Q": "What is typical usage of bloom filter?",
+      "A": ["the technique for applications where the amount of source data would require an impractically large amount of memory, with limited core memory, Bloom's technique uses a smaller hash area but still eliminates most unnecessary accessesFor example, a hash area only 15% of the size needed by an ideal error-free hash still eliminates 85% of the disk accesses"]
+      },
+      {
+      "category": [
+        "CLUSTER","DEVOPS","HADOOP"
+      ],
+      "Q": "How you will test clusters setup. What to use for cluster benchmarking?",
+      "A": ["Terragen, Terrasort"]
+       },
+      {
+      "category": [
+        "GRADLE","INFRASTRUCTURE"
+      ],
+      "Q": "What  is Gradle?",
+      "A": ["Gradle is an open source build automation system that builds upon the concepts of Apache Ant and Apache Maven and introduces a Groovy-based domain-specific language (DSL) instead of the XML form used by Apache Maven of declaring the project configuration. Gradle uses a directed acyclic graph (\"DAG\") to determine the order in which tasks can be run."]
+      },
+           {
+      "category": [
+        "JENKINS","INFRASTRUCTURE"
+      ],
+      "Q": "What  is Jenkins?",
+      "A": ["Jenkins is a cross-platform, continuous integration and continuous delivery application"]
+      },
+         {
+      "category": [
+        "INFRASTRUCTURE","ABBREVIATION"
+      ],
+      "Q": "What does DSL mean?",
+      "A": ["Domain specific language."]
+      },
+      {
+      "category": [
+        "INFRASTRUCTURE","ABBREVIATION"
+      ],
+      "Q": "What does the DAG stands for?",
+      "A": ["Direc acyclic graph."]
+      },
+            {
+      "category": [
+        "KIBANA","ELASTICSEARCH","INFRASTRUCTURE"
+      ],
+      "Q": "How can you secure Kibana?",
+      "A": ["Nglix"]
+      },
+    {
+      "category": [
+        "LANGUAGES","GROOVY"
+      ],
+      "Q": "What is groovy?",
+      "A": ["Pptionally typed and dynamic language, with static-typing and static compilation capabilities. COmpiles to bytecode, runs on JVM. "]
+      },
+    {
+      "category": [
+        "INFRASTRUCTURE","ANSIBLE"
+      ],
+      "Q": "What is supervisorctl.",
+      "A": ["Ansible module or managing state of a program or group of programs."]
+      },
+    {
+      "category": [
+        "JAVA","GENERICS"
+      ],
+      "Q": "What is a bounded wildcard and what is an unbounded wildcard?",
+      "A": [
+      "<? extends T> and <? super T> are examples of bounded wildcards. An unbounded wildcard looks like <?>."]
+    },
+   {
+      "category": [
+        "JAVA","GENERICS"
+      ],
+      "Q": "Bounded wildcard, what it is and how it looks?",
+      "A": ["A bounded wildcard (<? extends T> or <? super T>) places a restriction on the type by saying that it either has to extend a specific type (<? extends T> is known as an upper bound), or has to be an ancestor of a specific type (<? super T> is known as a lower bound)."]
+    },
+    {
+      "category": [
+        "JAVA","GENERICS"
+      ],
+      "Q": "What means ? in generics like <?> ?",
+      "A": ["<?>, and basically means <? extends Object>. It loosely means the generic can be any type."]
+    },
+    {
+      "category": [
+        "UNIX"
+      ],
+      "tags":["UNIX","BASH","COMMANDLINE"],
+      "Q": "What are named pipes?",
+      "A": [
+      "Like un-named/anonymous pipes, named pipes provide a form of IPC (Inter-Process Communication). With anonymous pipes, there's one reader and one writer, but that's not required with named pipes—any number of readers and writers may use the pipe."
+       ]
+    },
+      {
+      "category": [
+        "JAVA","ANNOTATIONS","SPRING","SPRING 4"
+      ],
+      "Q": "What means @Around.",
+    "A": ["Around advice: Advice that surrounds a join point such as a method invocation. example:@Around(\"@annotation(some.package.with.annotation.Transactional)\")" ]
+    },
+    {
+      "category": [
+        "FULLTEXT"
+      ],
+      "Q": "What is bloom filter?",
+      "A": ["A Bloom filter is a data structure that can store elements in a fixed number of bits and tell you whether it’s seen those elements before when you query it. " ]
+    },
+        {
+      "category": [
+        "ECLIPSE","SHORTCUTS"
+      ],
+      "Q": "Open outline shortcut.",
+      "A": ["Ctrl + O , MAC: Cmd + O" ]
+    },
+            {
+      "category": [
+        "HTTP","WEB"
+      ],
+      "Q": "What means code 400?",
+      "A": ["Bad request"]
+    },
+                {
+      "category": [
+        "HTTP","WEB"
+      ],
+      "Q": "What means code 404?",
+      "A": ["Not found" ]
+    },
+                {
+      "category": [
+        "HTTP","WEB"
+      ],
+      "Q": "What means code 403?",
+      "A": ["Forbidden" ]
+    },
+            {
+      "category": [
+        "JAVA","ANNOTATIONS","SPRING","SPRING 4"
+      ],
+      "Q": "What means annotation @Service in Spring framework?",
+      "A": ["Indicates that an annotated class is a \"Service\" (e.g. a business service facade). This annotation serves as a specialization of @Component, allowing for implementation classes to be autodetected through classpath scanning." ]
+    },
+        {
+      "category": [
+        "JAVA","ANNOTATIONS"
+      ],
+      "Q": "What means annotation @Retention?",
+      "A": ["Indicates how long annotations with the annotated type are to be retained." ]
+    },
+    {
+      "category": [
+        "JAVA","ANNOTATIONS"
+      ],
+      "Q": "What are the possible values for annotation @Retention?",
+      "A": ["SOURCE,CLASS,RUNTIME" ]
+    },
+    {
+      "category": [
+        "JAVA","ANNOTATIONS"
+      ],
+      "Q": "What are the possible values for annotation @Target - ElementType?",
+      "A": [" TYPE,FIELD,METHOD,PARAMETER,CONSTRUCTOR,LOCAL_VARIABLE,ANNOTATION_TYPE,PACKAGE" ]
+    },
+        {
+      "category": [
+        "JAVA","ANNOTATIONS"
+      ],
+      "Q": "What means RetentionPolicy.SOURCE?",
+      "A": ["RetentionPolicy.SOURCE: Discard during the compile. These annotations don't make any sense after the compile has completed, so they aren't written to the bytecode.
+Example: @Override, @SuppressWarnings" ]
+    },
+            {
+      "category": [
+        "JAVA","ANNOTATIONS"
+      ],
+      "Q": "What means RetentionPolicy.CLASS?",
+      "A": ["RetentionPolicy.CLASS: Discard during class load. Useful when doing bytecode-level post-processing. Somewhat surprisingly, this is the default." ]
+    },
+        {
+      "category": [
+        "JAVA","ANNOTATIONS"
+      ],
+      "Q": "What means RetentionPolicy.RUNTIME?",
+      "A": ["Do not discard. The annotation should be available for reflection at runtime. Example: @Deprecated" ]
+    },
+ {
+      "category": [
+        "JAVA","ANNOTATIONS"
+      ],
+      "Q": "What is the default value of @Retention?",
+      "A": ["If no Retention annotation is present on an annotation type declaration, the retention policy defaults to RetentionPolicy.CLASS." ]
+    },
+     {
+      "category": [
+        "JAVA","ANNOTATIONS"
+      ],
+      "Q": "What is the default value of @Target?",
+      "A": ["If a Target meta-annotation is not present on an annotation type declaration, the declared type may be used on any program element" ]
+    },
+     {
+      "category": [
+        "JAVA","ANNOTATIONS"
+      ],
+      "Q": "What means annotation @Target?",
+      "A": ["Indicates the kinds of program element to which an annotation type is applicable." ]
+    },
+
+    {
+      "category": [
+        "WEB","REST"
+      ],
+      "Q": "What is the difference between PUT and POST?",
+      "A": ["Do you name your URL objects you create explicitly, or let the server decide? If you name them then use PUT. If you let the server decide then use POST.
+PUT is idempotent, so if you PUT an object twice, it has no effect. This is a nice property, so I would use PUT when possible.
+You can update or create a resource with PUT with the same object URL
+With POST you can have 2 requests coming in at the same time making modifications to a URL, and they may update different parts of the object.
+example: POST /expense-report, PUT  /expense-report/10929" ]
+    },
+    {
+      "category": [
+        "ECLIPSE","SHORTCUTS"
+      ],
+      "Q": "Open type hierarchy.",
+      "A": ["Ctrl + T , MAC: Cmd + T" ]
+    },
+    {
+      "category": [
+        "SOFTWARE TESTING"
+      ],
+      "Q": "What is sanity test.",
+      "A": ["It is simplet test that some statement is true. The advantage of a sanity test, over performing a complete or rigorous test, is speed." ]
+    },
+        {
+      "category": [
+        "JAVA"
+      ],
+      "tags":["JAVA","GARBAGE COLLECTIONS"],
+      "Q": "What is the default garbage collector in Java 8?",
+      "A": [
+      "Parallel GC"
+      ]
+    },
+        {
+      "category": [
+        "UNIX"
+      ],
+      "tags":["UNIX","BASH","COMMANDLINE","NAMED_PIPES"],
+      "Q": "How are named pipes implemented?",
+      "A": [
+      "TODO"
+      ]
+    },
+    {
+      "category": [
+        "UNIX"
+      ],
+      "tags":["UNIX","BASH","COMMANDLINE"],
+      "Q": "How do you create named pipes?",
+      "A": [
+      "Named pipes are created via mkfifo or mknod: $ mkfifo /tmp/testpipe, $ mknod /tmp/testpipe p"
+      ]
+    },
+    {
+      "category": [
+        "UNIX"
+      ],
+      "tags":["UNIX","BASH","COMMANDLINE","SHELL","CODE"],
+      "Q": "What does the following code?",
+      "code":{
+          "format":"bash",
+          "content":"
+#!/bin/bash
+
+pipe=/tmp/testpipe
+
+trap \"rm -f $pipe\" EXIT
+
+if [[ ! -p $pipe ]]; then
+    mkfifo $pipe
+fi
+
+while true
+do
+    if read line <$pipe; then
+        if [[ \"$line\" == 'quit' ]]; then
+            break
+        fi
+        echo $line
+    fi
+done
+
+echo \"Reader exiting\"",
+
+      },
+      "A": [
+      "The following shell script reads from a pipe. It first creates the pipe if it doesn't exist, then it reads in a loop till it sees \"quit\"."
+      ]
+    },
+
+    {
+      "category": [
+        "ALGORITMIZATION"
+      ],
+      "Q": "Will throw ConcurrentModificationException method set() on Arraylist? Why/why not?",
+      "A": [
+       "No. A structural modification is any operation that adds or deletes one or more elements, or explicitly resizes the backing array; merely setting the value of an element is not a structural modification."
+       ]
+    },
+                      {
+      "category": [
+        "JAVA"
+      ],
+      "Q": "What is parameter -Xmx<size>.",
+      "A": [
+      "Sets maximum Java heap size. The memory flag can also be specified in multiple sizes -Xmx1024k, -Xmx512m, -Xmx8g. The Xms flag has no default value, and Xmx typically has a default value of 256MB. A common use for these flags is when you encounter a java.lang.OutOfMemoryError.When using these settings, keep in mind that these settings are for the JVM's heap, and that the JVM can/will use more memory than just the size allocated to the heap."
+       ]
+    },
+                      {
+      "category": [
+        "JAVA"
+      ],
+      "Q": "What is parameter -Xms<size>.",
+      "A": [
+      "Sets initial Java heap size."
+       ]
+    },
+                 {
+      "category": [
+        "ALGORITMIZATION"
+      ],
+      "Q": "Which classes in Java have fail fast iterators.",
+      "A": [
+       "HashMap,Vector,ArrayList,HashSet"
+       ]
+    },
+            {
+      "category": [
+        "ALGORITMIZATION"
+      ],
+      "Q": "Which classes in Java have fail safe iterators.",
+      "A": [
+       "CopyOnWriteArrayList,ConcurrentHashMap"
+       ]
+    },
+            {
+      "category": [
+        "ALGORITMIZATION"
+      ],
+      "Q": "What is fail-fast and fail safe iterators?",
+      "A": [
+        "Fail Safe Iterator makes copy of the internal data structure (object array) and iterates over the copied data structure.Any structural modification done to the iterator affects the copied data structure.Fail fast iterator while iterating through the collection , instantly throws Concurrent Modification Exception if there is structural modification  of the collection . Thus, in the face of concurrent modification, the iterator fails quickly and cleanly, rather than risking arbitrary, non-deterministic behavior at an undetermined time in the future. "
+      ]
+    },
+        {
+      "category": [
+        "ALGORITMIZATION"
+      ],
+      "Q": "What is fail-fast and fail safe iterators?",
+      "A": [
+        "Fail Safe Iterator makes copy of the internal data structure (object array) and iterates over the copied data structure.Any structural modification done to the iterator affects the copied data structure.Fail fast iterator while iterating through the collection , instantly throws Concurrent Modification Exception if there is structural modification  of the collection . Thus, in the face of concurrent modification, the iterator fails quickly and cleanly, rather than risking arbitrary, non-deterministic behavior at an undetermined time in the future. "
+      ]
+    },
+      {
+      "category": [
+        "ALGORITMIZATION"
+      ],
+      "Q": "Which copy technique (deep or shallow ) is used by the TreeMap clone() method ?",
+      "A": [
+        "shallow"
+      ]
+    },
+          {
+      "category": [
+        "ALGORITMIZATION"
+      ],
+      "Q": "Why  java's  treemap does not allow an initial size ?",
+      "A": [
+        "HashMap reallocates its internals as the new one gets inserted while TreeMap does not reallocate nodes on adding new ones. Thus , the size of the TreeMap  dynamically increases if needed , without shuffling the internals. So it is meaningless to set the initial size of the TreeMap ."
+      ]
+    },
+          {
+      "category": [
+        "ALGORITMIZATION"
+      ],
+      "Q": "What is the runtime performance of the get() method in TreeMap and HashMap ,where n represents the number of elements ?",
+      "A": [
+        "Treemap is according to docuemntation log(n) and HashMap with asumption of correct disperse of element in bucket O(1) - constatn time"
+      ]
+    },
+          {
+      "category": [
+        "ALGORITMIZATION"
+      ],
+      "Q": "What is the runtime performance of the get() method in TreeMap and HashMap ,where n represents the number of elements ?",
+      "A": [
+        "Treemap is according to docuemntation log(n) and HashMap with asumption of correct disperse of element in bucket O(1) - constatn time"
+      ]
+    },
+    {
+      "category": [
+        "BIGDATA"
+      ],
+      "Q": "three types of delivery semantics (distributed message queue) and their meaning",
+      "A": [
+        "at-most-once",
+        "at-least-once",
+        "and exactly-once"
+      ]
+    },
+    {
+      "category": [
+        "JAVA"
+      ],
+      "Q": "How is in Java implemented TreeMap, statisctic in Big O notation",
+      "A": [
+        "Treemap is sorted according to the natural ordering of its keys, or by a Comparator provided at map creation time, depending on which constructor is used. This implementation provides guaranteed log(n) time cost for the containsKey, get, put and remove operations. Algorithms are adaptations of those in Cormen, Leiserson, and Rivest's Introduction to Algorithms."
+      ]
+    },
+    {
+      "category": [
+        "ALGORITMIZATION"
+      ],
+      "Q": "Red-Black tree.",
+      "A": [
+        ""
+      ]
+    },
+        {
+      "category": [
+        "ALGORITMIZATION"
+      ],
+      "Q": "Why and when we use TreeMap ?",
+      "A": [
+        "We need TreeMap  to get the sorted list of keys in ascending order."
+      ]
+    },
+            {
+      "category": [
+        "LUCENE","INDEXING","ALGORITMIZATION"
+      ],
+      "Q": "What is trie, how it look like and wha tis the usage?",
+      "A": [
+        "a trie, also called digital tree and sometimes radix tree or prefix tree (as they can be searched by prefixes), is an ordered tree data structure that is used to store a dynamic set or associative array where the keys are usually strings. Unlike a binary search tree, no node in the tree stores the key associated with that node; instead, its position in the tree defines the key with which it is associated. It is used to create inverted indexes."
+      ]
+    },
+            {
+      "category": [
+        "JAVA","COLLECTIONS"
+      ],
+      "Q": "Which classes uses enumerator instead of iterator?",
+      "A": [
+        "HAsh table, Vector"
+      ]
+    },
+    {
+      "category": [
+        "JAVA"
+      ],
+      "Q": "JAVA: How is the difference between Hashmap and Hashtable",
+      "A": [
+        "Difference between hashmap and hashtable  includes five point  namely Synchronization,Null keys and values,Iterating values , Fail fast iterator ,Performance,Superclass ."
+      ]
+    },
+        {
+      "category": [
+        "DATABASES"
+      ],
+      "Q": "What is the difference between views and materialized views?",
+      "A": [
+        "Materialized views are disk based and are updated periodically based upon the query definition. Views are virtual only and run the query definition each time they are accessed."
+      ]
+    },
+        {
+      "category": [
+        "DATABASES"
+      ],
+      "Q": "What means ACID?",
+      "A": [
+        "Atomicity,Consistency,Isolation,Durability"
+      ]
+    }
+  ]
+}
