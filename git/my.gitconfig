@@ -1,13 +1,30 @@
 [user]
 	name = Barbora Cervenkova
 	email = cervenkovabv@gmail.com
-[branch]
-	autosetuprebase = always
 [alias]
-	st = status
+	cl = log --graph --pretty=format:'%h%d %s (%an)'
 	ci = commit
+	st = status
+	a = add
+	s  = status -sb
+	c  = checkout --
 	br = branch
 	co = checkout
+	cp = cherry-pick
+	df = diff
+	lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --date=relative
+	ll = log --first-parent --pretty=format:'%h %s'
+	lo = log --oneline
+	authors = log --pretty=format:'%an <%ae>'
+	browse = instaweb -d webrick -p 8888
+        tree = log --oneline --decorate --all --graph
 	last = log -1 HEAD
 	undo = reset --soft HEAD~
         ls = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate
+        # Typos ...
+        dif = diff
+        di = diff
+        dff = diff
+        slap = "!f() { commit_counts=${1}; git rebase -i HEAD~$commit_counts;  }; f"
+[core]
+	excludefile = ~/.gitignore

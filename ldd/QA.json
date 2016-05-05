@@ -58,17 +58,50 @@ The Lob type is inferred from the type of the persistent field or property, and 
       },
      {
       "category": [
+        "JAVA","SPRING","ANNOTATIONS","SPRING_ANNOTATIONS"
+      ],
+      "Q": "Wha are meta-annotations and why are only Spring specific?",
+      "A": ["This mechanism, where you can have \"meta-annotations\" that are themselves annotated with other annotations, which then apply to the class on which you put your meta-annotation, is something that is specific to the Spring Framework. It is not a standard feature of Java annotations.
+It doesn't work because JUnit does not understand this mechanism. The @RunWith annotation is a JUnit annotation. JUnit does not understand that it should look at the annotations that are on your @ControllerTest meta-annotation.
+So, this mechanism works with annotations that are processed by Spring, but not with annotations that are processed by other tools such as JUnit."]},
+     {
+      "category": [
         "JAVA","JPA"
       ],
       "Q": "What are the default fetchTypes for basic,OneToMany,ManyToMany?",
       "A": ["Basic - eager, other lazy"]
       },
+           {
+      "category": [
+        "ECLIPSE"
+      ],
+      "Q": "What does Maven Update Project do in Eclipse?",
+      "A": ["It syncs the Eclipse project settings with that of the pom. If you for example change important plugin settings, such as the output java version, you will find that Eclipse will ask you to update the project and afterwards the configured Java runtime in the project will have changed to reflect what your Maven pom indicates."]
+      },
+
       {
       "category": [
         "DEVOPS","LINUX"
       ],
       "Q": "What is cgroup?",
       "A": ["cgroups (abbreviated from control groups) is a Linux kernel feature that limits, accounts for, and isolates the resource usage (CPU, memory, disk I/O, network, etc.) of a collection of processes."]
+      },
+      {
+      "category": [
+        "JAVA"
+      ],
+      "Q": "When you need JRE instead of JRE in production?",
+      "A": ["The JDK is required when you need something to be compiled on the fly. Example JSP. Note:Some Servlet Containers (like Tomcat5.5 and Jetty6) don't require a JDK for JSPs.",
+            "It is also usefull when you want to use tools for profiling/monitoring the application"
+            ]
+      },
+      {
+      "category": [
+        "JAVA"
+      ],
+      "Q": "Difference between JDK and JRE?",
+      "A": ["JRE is a part of JDK, JDK provides set of tools to develop and run Java."
+            ]
       },
      {
       "category": [
