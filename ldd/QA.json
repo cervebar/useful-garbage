@@ -1,3 +1,56 @@
+1. What is the opposite function of malloc() in C?
+
+2. What Unix function lets a socket receive connections?
+
+3. How many bytes are necessary to store a MAC address?
+
+4. Sort the time taken by: CPU register read, disk seek, context switch, system memory read.
+
+5. What is a Linux inode?
+
+6. What Linux function takes a path and returns an inode?
+
+7. What is the name of the KILL signal?
+8. Why Quicksort is the best sorting method?
+9. There's an array of 10,000 16-bit values, how do you count the bits most efficiently?
+10. What is the type of the packets exchanged to establish a TCP connection?
+1. How much should you charge to wash all the windows in Seattle?
+2. Why are manhole covers round?
+3. You need to check that your friend Bob has your correct phone number, but you cannot ask him directly. You must write the question on a card and give it to Eve who will take the card to Bob and return the answer to you. What must you write on the card, besides the question, to ensure that Bob can encode the message so that Eve cannot read your phone number?
+4. How many piano tuners are there in the entire world?
+5. Every man in a village of 100 married couples has cheated on his wife. Every wife in the village instantly knows when a man other than her husband has cheated but does not know when her own husband has. The village has a law that does not allow for adultery. Any wife who can prove that her husband is unfaithful must kill him that very day. The women of the village would never disobey this law. One day, the queen of the village visits and announces that at least one husband has been unfaithful. What happens?
+6. A man pushed his car to a hotel and lost his fortune. What happened?
+7. How many times a day does a clock's hands overlap?
+8. How many vacuums are made per year in the USA?
+9. Explain the significance of "dead beef."
+10. If a person dials a sequence of numbers on the telephone, what possible words/strings can be formed from the letters associated with those numbers?
+11. You are shrunk to the height of a nickel and your mass is proportionally reduced so as to maintain your original density. You are then thrown into an empty glass blender. The blades will start moving in 60 seconds. What do you do?
+12. How many golf balls can fit in a school bus?
+13. Explain a database in three sentences to your 8-year-old nephew.
+14. You have to get from point A to point B. You don't know if you can get there. What would you do?
+15. You are at a party with a friend and 10 people are present (including you and the friend). Your friend makes you a wager that for every person you find who has the same birthday as you, you get $1; for every person he finds who does not have the same birthday as you, he gets $2. Would you accept the wager?
+oracle-java8-unlimited-jce-policy
+what does apt-get -f install
+How to resolve hostname? - nslookup
+LRU cache- last recently used
+What is for command ldd?
+
+What is EC2 instance?   An EC2 instance is a virtual server in Amazon’s Elastic Compute Cloud (EC2) for running applications on the Amazon Web Services (AWS) infrastructure.
+On demand vs reserved instances in aws, what is the difference?
+    - With On-Demand instances, you pay for compute capacity by the hour with no long-term commitments or upfront payments. You can increase or decrease your compute capacity depending on the demands of your application and only pay the specified hourly rate for the instances you use.
+    -
+
+What is a PTR record?
+You can think of the PTR record as an opposite of the A record. While the A record points a domain name to an IP address, the PTR record resolves the IP address to a domain/hostname.
+
+What is ERP system? Enterprise resource planning.
+What is LIMS system? Labaoratory information management system.
+What is Scada system? Supervisory control and Data aquisition system - used for monitoring industria processes,systems etc.
+
+What is variadic function? It's a funtion/method which arity is unknown, in Java for example (String ... params)
+
+The 8 stages Octagonal testing.: Understandable, Operable, Controllable, Observable, Consistent, Simple, Maintainable and Automatable.
+
 {
   "qa": [
           {
@@ -8,6 +61,266 @@
       "A": [
        "Iterator read internal data structure (object array) directly . The internal data structure(i.e object array) should not be modified while iterating through the collection. To ensure this it maintains an internal  flag \"mods\" .Iterator checks the \"mods\" flag whenever it gets the next value (using hasNext() method and next() method). Value of mods flag changes whenever there is an structural modification. Thus indicating iterator to throw ConcurrentModificationException."
        ]
+    },
+    {
+      "category": [
+        "ADMIN","LINUX","BASH"
+      ],
+      "Q": "How to execute action on many nodes at once?",
+      "A": [
+       "pssh -t 0 -h list-nodes.txt -l dspdev01 -P 'date'"
+     ]},
+      {
+      "category": [
+        "ADMIN","LINUX","BASH"
+      ],
+      "Q": "How to determine which shell is user running?",
+      "A": [
+       "ps -p $$ "
+     ]},
+          {
+      "category": [
+        "ADMIN","LINUX","BASH"
+      ],
+      "Q": "How to login under the bash shell?",
+      "A": [
+       "which bash, whereis bash, setenv SHELL /bin/bash, exec /bin/bash --login"
+     ]},
+    {
+      "category": [
+        "SOFTWARE_ENGINEERING","DEVELOPMENT","MAVEN"
+      ],
+      "Q": " What is semantic versioning?",
+      "A": [
+       "2.0.0. MAJOR version when you make incompatible API changes, MINOR version when you add functionality in a backwards-compatible manner, PATCH version when you make backwards-compatible bug fixes.http://semver.org/"
+       ]},
+
+          {
+      "category": [
+        "BASH","UNIX","GREP","ADMIN"
+      ],
+      "Q": "Grep return codes?",
+      "A": [
+       "Normally the exit status is 0 if a line is selected, 1 if no lines were selected, and 2 if an error occurred. However, if the -q or --quiet or --silent option is used and a line is selected, the exit status is 0 even if an error occurred. Other grep implementations may exit with status greater than 2 on error."
+     ]},
+                     {
+      "category": [
+        "HDFS","WEBHDFS"
+      ],
+      "Q": "Why there are 2 steps to putfile with webhdfs?",
+      "A": [
+       "Becuase the request is redirected to a datanode where the file data is to be written."
+       ]},
+      {
+      "category": [
+        "HADOOP","ADMIN","YARN"
+      ],
+      "Q": "Describe FairScheduler versus Capacity scheduler",
+      "A": [
+       " "
+     ]},
+      {"category": [
+        "DOCKER"
+      ],
+      "Q": "where is the docer file and how to install it",
+      "A": [
+       " "
+     ]},
+
+      {
+      "category": [
+        "HADOOP","ETL","HIVE"
+      ],
+      "Q": "What is bucketing, why and when you will use it?",
+      "A": [
+       " "
+     ]},
+      {
+      "category": [
+        "HADOOP"
+      ],
+      "Q": "Parquet format, how it looks like, what are advantages vs disadvantages?",
+      "A": [
+       " "
+     ]},
+                     {
+      "category": [
+        "SOFTWARE_ENGINEERING","DEVELOPMENT","MAVEN"
+      ],
+      "Q": "What means exclusions in maven dependency, why you need it?",
+      "A": [
+       "exclude the unwanted dependency, typical example is logging included in some library"
+       ]},
+                     {
+      "category": [
+        "SOFTWARE_ENGINEERING","DEVELOPMENT","MAVEN"
+      ],
+      "Q": "Maven dependency management vs dependencies ?",
+      "A": [
+       "Typicaly for managing version, then the versions are not in dependency, can be used for exclusions"
+       ]},                     {
+      "category": [
+        "SOFTWARE_ENGINEERING","DEVELOPMENT","MAVEN"
+      ],
+      "Q": "Maven Why using properties in this fomrat ${property name} rather than plain dependency?",
+      "A": [
+       "list of properties is easier, when I am using it as parent,then I can override easily the version"
+       ]},                     {
+      "category": [
+        "SOFTWARE_ENGINEERING","DEVELOPMENT","MAVEN"
+      ],
+      "Q": "?",
+      "A": [
+       ""
+       ]},                     {
+      "category": [
+        "SOFTWARE_ENGINEERING","DEVELOPMENT","MAVEN"
+      ],
+      "Q": "What is effective pom, why you need it?",
+      "A": [
+       ""
+       ]},
+   {
+      "category": [
+        "ADMIN","UNIX","SECURITY","KERBEROS"
+      ],
+      "Q": "What is KRB5CCNAME?",
+      "A": [
+       "Location  of  the  Kerberos  5 credentials (ticket) cache. Used for the enviroment in which is script running. If cache_name or keytab_name is not  specified,  klist  will  display  the credentials in the default credentials cache or keytab file as appropriate.  If the  KRB5CCNAME  environment variable  is  set,  its  value  is  used to name the default ticket cache."
+         ]
+    },
+    {
+      "category": [
+        "ADMIN","UNIX","SHELL"
+      ],
+      "Q": "What means <code>set -e</code>?",
+      "A": [
+       "If a command fails, set -e will make the whole script exit, instead of just resuming on the next line. If you have commands that can fail without it being an issue, you can append || true or || : to suppress this behavior — for example set -e followed by false || : will not cause your script to terminate."
+        ]
+    },
+        {
+      "category": [
+        "ADMIN","UNIX","SHELL"
+      ],
+      "Q": "What means <code>set -u</code>?",
+      "A": [
+       "Treat unset variables as an error, and immediately exit"
+        ]
+    },
+        {
+      "category": [
+        "ADMIN","UNIX","SHELL"
+      ],
+      "Q": "What means <code>set -o pipefail</code>?",
+      "A": [
+       "set -o pipefail causes a pipeline (for example, curl -s http://sipb.mit.edu/ | grep foo) to produce a failure return code if any command errors. Normally, pipelines only return a failure if the last command errors. In combination with set -e, this will make your script exit if any command in a pipeline errors."
+        ]
+    },
+        {
+      "category": [
+        "ADMIN","UNIX","SHELL","BASH"
+      ],
+      "Q": "What means <code>$?</code>?",
+      "A": [
+       "This variable holds the last command return code."]
+    },
+
+   {
+      "category": [
+        "ADMIN","UNIX","SECURITY"
+      ],
+      "Q": "What is SASL?",
+      "A": [
+       "Simple Authentication and Security Layer (SASL) is a framework for authentication and data security in Internet protocols. It decouples authentication mechanisms from application protocols, in theory allowing any authentication mechanism supported by SASL to be used in any application protocol that uses SASL."
+     ]
+    },
+              {
+      "category": [
+        "ADMIN","NETWORK"
+      ],
+      "Q": " What is VPC (vitual port channel)?",
+      "A": [
+       "A virtual PortChannel (vPC) allows links that are physically connected to two different Cisco Nexus™ 5000 Series devices to appear as a single PortChannel to a third device. The third device can be a Cisco Nexus 2000 Series Fabric Extender or a switch, server, or any other networking device."]
+    },
+           {
+      "category": [
+        "OPEN_SOURCE","SOLUTION_ARCHITECT","APACHE"
+      ],
+      "Q": " What does Apache Karaf?",
+      "A": [  "Karaf provides dual polymorphic container and application bootstrapping paradigms to the Enterprise.  Karaf can run as a standalone container, supporting a wide range of applications and technologies. Karaf enables us to build calvaDrive as modern modular web application consisting of one hundred OSGi bundles at the moment."
+  ]},
+
+  {
+      "category": [
+        "HDFS","HADOOP","BIGDATA"
+      ],
+      "Q": "two main components of HDFS?",
+      "A": [
+   "      HDFS is composed by: – a namenode hosting the metadata of the filesystem (directories, blocks location, file permissions or modes, …). There is only one namenode per HDFS, and the metadata are stored in memory by default.– a set of datanode hosting the file blocks. Files are composed by blocks (like in all filesystems). The blocks are located on different datanodes. The blocks can be replicated."]
+    },
+  {
+      "category": [
+        "UNIX","ADMIN"
+      ],
+      "Q": "What is in the /dev folder?",
+      "A": [
+        "/dev/ is the part in the unix directory tree that contains all \"device\" files -- unix traditionally treats just about everything you can access as a file to read from or write to.
+"
+ ]},
+  {
+      "category": [
+        "UNIX","ADMIN"
+      ],
+      "Q": "What is behind dev/sd[a-z][/d] name for exaple what mean s /dev/sda9?",
+      "A": [
+        "sd originally identified a SCSI device, but since the wildgrowth of USB (and other removable) data carriers it became a catch-all for any block device, The letter immediately after sd signifies the order in which it was first found -- a,b,c...z, the number after that signifies the partition on the device. "
+ ]},
+    {
+      "category": [
+        "ADMIN","AWS","CLOUD"
+      ],
+      "Q": "What EBS stands for?",
+      "A": [
+             "Amazon Elastic Block Store provides persistent block level storage volumes for use with Amazon EC2 instances in the AWS Cloud.  Each Amazon EBS volume is automatically replicated within its Availability Zone to protect you from component failure, offering high availability and durability. "
+ ]},
+   {
+      "category": [
+        "LINUX","DEVOPS","UNIX","ADMIN"
+      ],
+      "Q": " How to run application as a service?",
+      "A": [
+   "There are several approaches: tools/folder/commands to consider are: init.d or systemd, chkconfig, update-rc.d, systemctl "]
+    },
+    {
+      "category": [
+        "DEVELOPMENT","DEBUGGING","DEVOPS","UNIX"
+      ],
+      "Q": " What does nc -l <PORT> ?",
+      "A": [
+   "netcat utility, serves simple HTTP server responding with ok and displaying the content of the request, used for testing and debugging purpose, write response back in console"]
+    },
+    {
+      "category": [
+        "DEVOPS","UNIX","BASH"
+      ],
+      "Q": " What does sudo -E ?",
+      "A": [
+   "sudo -E preserves the user environment, including any proxy config"]},
+              {
+      "category": [
+        "DEVELOPMENT","DATABASES","DATA_PROCESSING"
+      ],
+      "Q": " What is pivot table ?",
+      "A": [
+       "In data processing, a pivot table is a data summarization tool found in data visualization programs such as spreadsheets or business intelligence software. Among other functions, a pivot table can automatically sort, count, total or give the average of the data stored in one table or spreadsheet, displaying the results in a second table showing the summarized data"  ]
+    },
+              {
+      "category": [
+        "DEVOPS","HADOOP"
+      ],
+      "Q": " How to run hdfs commands with debug in one line?",
+      "A": [
+       "HADOOP_ROOT_LOGGER=DEBUG,console hdfs dfs -ls"]
     },
         {
       "category": [
@@ -22,11 +335,7 @@
         "JAVA","JPA","ANNOTATIONS","JAVA EE","JAVA EE 6"
       ],
       "Q": "What means @Lob?",
-      "A": ["Specifies that a persistent property or field should be persisted as a large object to a database-supported large object type.
-
-Portable applications should use the Lob annotation when mapping to a database Lob type. The Lob annotation may be used in conjunction with the Basic annotation or the ElementCollection annotation when the element collection value is of basic type. A Lob may be either a binary or character type.
-
-The Lob type is inferred from the type of the persistent field or property, and except for string and character-based types defaults to Blob."]
+      "A": ["Specifies that a persistent property or field should be persisted as a large object to a database-supported large object type. Portable applications should use the Lob annotation when mapping to a database Lob type. The Lob annotation may be used in conjunction with the Basic annotation or the ElementCollection annotation when the element collection value is of basic type. A Lob may be either a binary or character type.The Lob type is inferred from the type of the persistent field or property, and except for string and character-based types defaults to Blob."]
       },
         {
       "category": [
@@ -61,9 +370,7 @@ The Lob type is inferred from the type of the persistent field or property, and 
         "JAVA","SPRING","ANNOTATIONS","SPRING_ANNOTATIONS"
       ],
       "Q": "Wha are meta-annotations and why are only Spring specific?",
-      "A": ["This mechanism, where you can have \"meta-annotations\" that are themselves annotated with other annotations, which then apply to the class on which you put your meta-annotation, is something that is specific to the Spring Framework. It is not a standard feature of Java annotations.
-It doesn't work because JUnit does not understand this mechanism. The @RunWith annotation is a JUnit annotation. JUnit does not understand that it should look at the annotations that are on your @ControllerTest meta-annotation.
-So, this mechanism works with annotations that are processed by Spring, but not with annotations that are processed by other tools such as JUnit."]},
+      "A": ["This mechanism, where you can have \"meta-annotations\" that are themselves annotated with other annotations, which then apply to the class on which you put your meta-annotation, is something that is specific to the Spring Framework. It is not a standard feature of Java annotations.It doesn't work because JUnit does not understand this mechanism. The @RunWith annotation is a JUnit annotation. JUnit does not understand that it should look at the annotations that are on your @ControllerTest meta-annotation.So, this mechanism works with annotations that are processed by Spring, but not with annotations that are processed by other tools such as JUnit."]},
      {
       "category": [
         "JAVA","JPA"
@@ -409,8 +716,7 @@ So, this mechanism works with annotations that are processed by Spring, but not 
         "JAVA","ANNOTATIONS"
       ],
       "Q": "What means RetentionPolicy.SOURCE?",
-      "A": ["RetentionPolicy.SOURCE: Discard during the compile. These annotations don't make any sense after the compile has completed, so they aren't written to the bytecode.
-Example: @Override, @SuppressWarnings" ]
+      "A": ["RetentionPolicy.SOURCE: Discard during the compile. These annotations don't make any sense after the compile has completed, so they aren't written to the bytecode. Example: @Override, @SuppressWarnings" ]
     },
             {
       "category": [
@@ -453,11 +759,7 @@ Example: @Override, @SuppressWarnings" ]
         "WEB","REST"
       ],
       "Q": "What is the difference between PUT and POST?",
-      "A": ["Do you name your URL objects you create explicitly, or let the server decide? If you name them then use PUT. If you let the server decide then use POST.
-PUT is idempotent, so if you PUT an object twice, it has no effect. This is a nice property, so I would use PUT when possible.
-You can update or create a resource with PUT with the same object URL
-With POST you can have 2 requests coming in at the same time making modifications to a URL, and they may update different parts of the object.
-example: POST /expense-report, PUT  /expense-report/10929" ]
+      "A": ["Do you name your URL objects you create explicitly, or let the server decide? If you name them then use PUT. If you let the server decide then use POST.PUT is idempotent, so if you PUT an object twice, it has no effect. This is a nice property, so I would use PUT when possible.You can update or create a resource with PUT with the same object URLWith POST you can have 2 requests coming in at the same time making modifications to a URL, and they may update different parts of the object.example: POST /expense-report, PUT  /expense-report/10929" ]
     },
     {
       "category": [
@@ -621,6 +923,238 @@ echo \"Reader exiting\"",
         "HashMap reallocates its internals as the new one gets inserted while TreeMap does not reallocate nodes on adding new ones. Thus , the size of the TreeMap  dynamically increases if needed , without shuffling the internals. So it is meaningless to set the initial size of the TreeMap ."
       ]
     },
+ {
+      "category": [
+        "HADOOP","YARN"
+      ],
+      "Q": "What means Yarn acronym?",
+      "A": [
+        "Yet Another Resource Manager"]
+    },
+ {
+      "category": [
+        "HADOOP","YARN"
+      ],
+      "Q": "What does org.apache.hadoop.yarn.util.resource.DefaultResourceCalculator vaule for property yarn.scheduler.capacity.resource-calculator",
+      "A": [
+        "DefaultResourceCalculator uses only memory information for allocating containers and CPU scheduling is not enabled by default."]
+    },
+ {
+      "category": [
+        "ADMIN","UNIX","DEVOPS"
+      ],
+      "Q": "What are ulimits and where to set it up?",
+      "A": [
+        "ulimit provides control over the resources available to the shell and to processes started by it, on systems that allow such control. File is /etc/security/limits.conf"]
+    },
+  {
+      "category": [
+        "ADMIN","UNIX","DEVOPS","SECURITY"
+      ],
+      "Q": "describe /etc/security/limits.conf ",
+      "A": [
+        "Each line describes a limit for a user in the form:<domain> <type> <item> <value>, domain:username/groupname/wildcards, type:soft/hard, item:core-limits the core file size(KB), value: core/data/fsize/memlock/nofile/rss/stack/cpu/nproc/as/maxlogins/maxsyslogins/priority/locks/sigending/msgqueue/nice.rtprio/chroot "] },
+ {
+      "category": [
+        "ADMIN","UNIX","DEVOPS"
+      ],
+      "Q": "Ulimit: soft limit vs hard limit?",
+      "A": [
+        "The soft limit is the value that the kernel enforces for the corresponding resource. The hard limit acts as a ceiling for the soft limit."]
+    },
+     {
+      "category": [
+        "ADMIN","UNIX","DEVOPS"
+      ],
+      "Q": "What does nslookup?",
+      "A": [
+        "nslookup is a network administration command-line tool available for many computer operating systems for querying the Domain Name System (DNS) to obtain domain name or IP address mapping or for any other specific DNS record."]
+    },
+ {
+      "category": [
+        "ADMIN","UNIX","DEVOPS"
+      ],
+      "Q": "Ulimit: soft limit vs hard limit?",
+      "A": [
+        "The soft limit is the value that the kernel enforces for the corresponding resource. The hard limit acts as a ceiling for the soft limit."]
+    },
+ {
+      "category": [
+        "ADMIN","UNIX","DEVOPS"
+      ],
+      "Q": "Ulimit how does it affect root user?",
+      "A": [
+        "no effect on the root user or any process with the CAP_SYS_ADMIN or CAP_SYS_RESOURCE capabilities are not affected by this kind of limitation on a Linux based system.
+"]
+
+    },
+     {
+      "category": [
+        "ADMIN","UNIX","DEVOPS"
+      ],
+      "Q": "/etc/pam.d/?",
+      "A": [
+        "configuration files TODO
+        "]},
+     {
+      "category": [
+        "ADMIN","UNIX","DEVOPS"
+      ],
+      "Q": "Which processes are not affected by ulimt??",
+      "A": [
+        "no effect on the root user or any process with the CAP_SYS_ADMIN or CAP_SYS_RESOURCE capabilities are not affected by this kind of limitation on a Linux based system.
+"]
+    },
+ {
+      "category": [
+        "HADOOP","YARN"
+      ],
+      "Q": "What does org.apache.hadoop.yarn.util.resource.DominantResourceCalculator vaule for property yarn.scheduler.capacity.resource-calculator",
+      "A": [
+        "DominantResourceCalculator uses both memory as well as the CPU, the resource calculator "]
+    },
+ {
+      "category": [
+        "UNIX","ADMIN","DEVOPS"
+      ],
+      "Q": "What is fork bomb and how to prevent it.",
+      "A": [
+        "Restricting per user processes ( -u) can be useful for limiting the potential effects of a fork bomb."]
+    },
+
+   {
+      "category": [
+        "HADOOP","YARN"
+      ],
+      "Q": "What sets property yarn.scheduler.capacity.resource-calculator",
+      "A": [
+        "DominantResourceCalculator, DefaultResourceCalculator - how the resources for container will be calculated "]
+    },
+       {
+      "category": [
+        "HADOOP","YARN"
+      ],
+      "Q": "What sets property yarn.scheduler.capacity.resource-calculator",
+      "A": [
+        "DominantResourceCalculator, DefaultResourceCalculator - how the resources for container will be calculated "]
+    },
+       {
+      "category": [
+        "ALGORITMIZATION","JAVA"
+      ],
+      "Q": "What is the range of 32-bit signed two's complement integer",
+      "A": [
+        "minimum value of -2,147,483,648 and a maximum value of 2,147,483,647"]
+    },
+           {
+      "category": [
+        "JDBC","JAVA","DATABASES"
+      ],
+      "Q": "What is the difference between obdc6.jar a nd odbc14.jar?",
+      "A": [
+        "The number menas version of Java, so odbc14 is compatible for 1.4 Java and the 6 for 1.6 and more (actually it is certified also for 6,7,8)"]
+    },
+    {
+      "category": [
+        "LINUX","DEVOPS"
+      ],
+      "Q": "What means <code>sudo: no tty present and no askpass program specified.</code>",
+      "A": [
+        "the command is not part of your path (and the full path is not specified). You can fix it by either adding the command to your PATH or invoking it with an absolute path, i.e."]
+    },
+    {
+      "category": [
+        "LINUX","DEVOPS","ADMIN"
+      ],
+      "Q": "How to list all users",
+      "A": [
+        "All users are in file /etc/paswd, so you can look with this command <code>cut -d: -f1 /etc/passwd</code>"
+      ]
+      },
+
+           {
+      "category": [
+        "LINUX","DEVOPS"
+      ],
+      "Q": "How you chek that the LDAP is up and running from command line?",
+      "A": [
+        "ldapsearch -LLL -x -h \"IP or HOST\" -b \"dc=gin,dc=merck,dc=com\""]
+    },
+           {
+      "category": [
+        "SQOOP","BIGDATA","DEV"
+      ],
+      "Q": "How to import table without primary key and what does it mean in Sqoop?",
+      "A": [
+        "-m 1 = use only one mapper, or --split-by <column_name> -> say to sqoop on wich column split for mapping"]
+    },
+
+       {
+      "category": [
+        "HADOOP","YARN"
+      ],
+      "Q": "What sets property yarn.scheduler.capacity.resource-calculator",
+      "A": [
+        "DominantResourceCalculator, DefaultResourceCalculator - how the resources for container will be calculated "]
+    },
+       {
+      "category": [
+        "HADOOP","YARN"
+      ],
+      "Q": "What are you setting with arn.scheduler.capacity.root.<queue-path>.acl_submit_applications ",
+      "A": [
+        "Enables users to submit a job or application to a specific queue. Username and a group must be defined in a comma separated list. A special value of * allows all the users to submit jobs and applications to the queue."]
+    },
+
+    {
+      "category": [
+        "JAVA","ANNOTATIONS","JAVA_8","@FUNCTIONAL_INTERFACE"
+      ],
+      "Q": "@Functional interface, what it is?",
+      "A": [
+        "An informative annotation type used to indicate that an interface type declaration is intended to be a functional interface as defined by the Java Language Specification. Conceptually, a functional interface has exactly one abstract method. Since default methods have an implementation, they are not abstract. If an interface declares an abstract method overriding one of the public methods of java.lang.Object, that also does not count toward the interface's abstract method count since any implementation of the interface will have an implementation from java.lang.Object or elsewhere.
+Note that instances of functional interfaces can be created with lambda expressions, method references, or constructor references."]
+    },
+        {
+      "category": [
+        "JAVA","ANNOTATIONS","JAVA_8","@FUNCTIONAL_INTERFACE"
+      ],
+      "Q": "@Functional interface, which interfaces are related to this annotation and why?",
+      "A": [
+        "java.lang.Runnable, java.awt.event.ActionListener, java.util.Comparator, java.util.concurrent.Callable. They have one method and are mostly used for inner classes. In Java 8 this can be used as lambda expression."]
+    },
+            {
+      "category": [
+        "JAVA","ANNOTATIONS","JAVA_8","@FUNCTIONAL_INTERFACE"
+      ],
+      "Q": "Single Abstract Method interfaces (SAM Interfaces) what it is?",
+      "A": [
+        "java.lang.Runnable, java.awt.event.ActionListener, java.util.Comparator, java.util.concurrent.Callable. They have one method and are mostly used for inner classes. In Java 8 this can be used as lambda expression. @FuntionalInterface is related to this topic since Java 8."]
+    },
+            {
+      "category": [
+        "JAVA","ANNOTATIONS","JAVA_8","@FUNCTIONAL_INTERFACE"
+      ],
+      "Q": "@FunctionalInterface since which version of Java?",
+      "A": [
+        "Java 8 (related to lambda expressions)"]
+      },
+     {
+      "category": [
+        "JAVA","ANNOTATIONS","JAVA_8","@FUNCTIONAL_INTERFACE"
+      ],
+      "Q": "How looks code of the simple @FunctionalInterface?",
+      "A": [
+        "<code>@FunctionalInterface\npublic interface SimpleFuncInterface {\npublic void doWork();\n}</code>"]
+      },
+          {
+      "category": [
+        "BASH"
+      ],
+      "Q": "What is the purpose of using shift in bash scripts??",
+      "A": [
+        "shift is a bash built-in which kind of removes arguments in beginning of the argument list. Given that the arguments provided to the script are 3 available in $1, $2, $3, then a call to shift will make $2 the new $1"      ]
+    },
           {
       "category": [
         "ALGORITMIZATION"
@@ -686,6 +1220,21 @@ echo \"Reader exiting\"",
         "a trie, also called digital tree and sometimes radix tree or prefix tree (as they can be searched by prefixes), is an ordered tree data structure that is used to store a dynamic set or associative array where the keys are usually strings. Unlike a binary search tree, no node in the tree stores the key associated with that node; instead, its position in the tree defines the key with which it is associated. It is used to create inverted indexes."
       ]
     },
+                {
+      "category": [
+        "YARN","DEVOPS","YARN_PROPERTIES"
+      ],
+      "Q": "What does property yarn.scheduler.capacity.root.support.services.minimum-user-limit-percent?",
+      "A": [
+        "The minimum-user-limit-percent property can be used to set the minimum percentage of resources allocated to each leaf queue user. For example, to enable equal sharing of the \"services\" leaf queue capacity among five users, you would set the minimum- user-limit property to 20%:"]
+    },
+                    {
+      "category": [
+        "YARN","DEVOPS","YARN_PROPERTIES"
+      ],
+      "Q": "Property yarn.scheduler.capacity.root.<queuename>.minimum-user-limit-percent is set to 20, what does it mean?",
+      "A": ["first takes 100%, after second job they share 50%, 3 -> 33,3%, 4 -> 25 %, 5 -> 20% and this is the limit, the 6th job must wait, we reach tme minimum resources allocated for job."]
+       },
             {
       "category": [
         "JAVA","COLLECTIONS"

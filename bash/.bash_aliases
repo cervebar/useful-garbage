@@ -6,7 +6,10 @@ alias gc='git commit'
 alias gd='git diff'
 alias go='git checkout '
 alias gf='git diff '
+alias gp='git push'
+alias gr='git rm'
 alias gb='git branch -a '
+alias gl='git log --oneline'
 alias gah='git rev-list origin..HEAD | wc -l | xargs echo "[ahead $1]"'
 
 # ls aliases ====================================================
