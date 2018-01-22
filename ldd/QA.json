@@ -1,3 +1,8 @@
+What is POSIX? Describe.
+
+What is $$ in bash scripting?
+ - $$ is the process ID (PID) of the script itself.
+
 1. What is the opposite function of malloc() in C?
 
 2. What Unix function lets a socket receive connections?
