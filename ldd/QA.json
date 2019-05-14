@@ -1,5 +1,20 @@
 What is POSIX? Describe.
 
+What is the differenece between? (hint new Boolean(true))
+boolean isTrue(Boolean b) {
+  return b == Boolean.TRUE;
+}
+a
+Java
+boolean isTrue(Boolean b) {
+  return Boolean.TRUE.equals(b);
+}
+
+What is IFS? What it is used for? What is default value?
+The Internal Field Separator that is used for word splitting after expansion and to split lines into words with the read builtin command. The default value is ``<space><tab><newline>''
+tags: bash, scripting, devops
+
+
 What is $$ in bash scripting?
  - $$ is the process ID (PID) of the script itself.
 
@@ -55,6 +70,102 @@ What is Scada system? Supervisory control and Data aquisition system - used for 
 What is variadic function? It's a funtion/method which arity is unknown, in Java for example (String ... params)
 
 The 8 stages Octagonal testing.: Understandable, Operable, Controllable, Observable, Consistent, Simple, Maintainable and Automatable.
+
+SPARK: What is the diffrenece between --executor-cores and --num-executors?
+
+What is REPL?
+SW
+read eval print loop
+
+Does Java have REPL?
+- officialy from Java 9, invoke by jshell $JAVA_HOME/bin/jshell
+
+
+Difference between `git reset --soft` and `git reset --hard`
+GIT, SOFTWARE_ENGINEERING
+
+Java - which classloaders you know
+JAVA
+1) Bootstrap Class Loader n
+Load classes from JAVA_HOME/jre/lib/rt.jar 
+2) Extensions Class Loader< 
+Load classes from JAVA_HOME/jre/lib/ext 
+3) System Class Loader 
+Classpath of the application 
+
+
+Name 3 Java 8 functioanl interfaces and their meanings.
+JAVA,JAVA_8, SOFTWAREE_ENGINEERING
+Supplier<T> if you want to return a value of T without passing any parameters
+Function<T,R> if you want to pass a value of T and return a value of R
+Consumer<T> if you want to pass value T as a parameter and return void
+
+
+What is ECC memory?
+HW
+Error-correcting code memory (ECC memory) is a type of computer data storage that can detect and correct the most common kinds of internal data corruption. 
+
+
+What means heap polution?
+JAVA, SOFTWARE_ENGINEERING
+It refers to references which have a type that is not a supertype of the object they point to. Heap pollution is when you get a ClassCastException when doing an operation on a generic interface and it contains another type than declared.n
+
+18. How to recover a NameNode when it is down?
+HADOOP, BIG DATA, HDFS
+    - Use the FsImage which is file system metadata replica to start a new NameNode. 
+    - Configure the DataNodes and also the clients to make them acknowledge the newly started NameNode.
+    - Once the new NameNode completes loading the last checkpoint FsImage which has received enough block reports from the DataNodes, it will start to serve the client. 
+
+What do you understand by Rack Awareness in Hadoop?
+HADOOP, BIG_DATA
+It is an algorithm applied to the NameNode to decide how blocks and its replicas are placed. Depending on rack definitions network traffic is minimized between DataNodes within the same rack. For example, if we consider replication factor as 3, two copies will be placed on one rack whereas the third copy in a separate rack.
+
+In case of large Hadoop clusters, the NameNode recovery process consumes a lot of time which turns out to be a more significant challenge in case of routine maintenance.
+
+What is the difference between “HDFS Block” and “Input Split”?
+HADOOP, HDFS, BIG_DATA
+The HDFS divides the input data physically into blocks for processing which is known as HDFS Block.
+Input Split is a logical division of data by mapper for mapping operation.
+
+Explain the difference between Hadoop and RDBMS.
+HADOOP, BIG_DATA
+  - schema, data types, speed, cost, applicaitons 
+
+Explain the difference between Hadoop and RDBMS.
+
+What are the common input formats in Hadoop?
+HADOOP, BIG_DATA
+    Text Input Format – The default input format defined in Hadoop is the Text Input Format.
+    Sequence File Input Format – To read files in a sequence, Sequence File Input Format is used.
+    Key Value Input Format – The input format used for plain text files (files broken into lines) is the Key Value Input Format.
+
+What is erasure code
+SOFTWARE_ENGINEERING
+In coding theory, an erasure code is a forward error correction (FEC) code under the assumption of bit erasures (rather than bit errors),
+
+How is erasure coding connected to Hadoop?
+HADOOP, SOFTWARE_ENGINEERING
+it is new in Hadoop 3 as Hadoop 2 has replication
+
+
+hezka testovaci ukazka JAva 8
+@Test
+public void kvak() {
+  List<Integer> windows = asList(30, 70, 365);
+  int max = windows.stream().mapToInt(i -> i).max().getAsInt();
+  int max2 = Collections.max(windows);
+  int max3 = windows.stream().max((a, b) -> Integer.max(b, a)).get();// pozor vraci 30 v tomto pripade
+  int max4 = windows.stream().max(Integer::compare).get();
+  System.out.println(max);
+  System.out.println(max2);
+  System.out.println(max3);
+  System.out.println(max4);
+}
+
+
+BASH: set default variable or set setted
+
+FOO=${VARIABLE:-default} 
 
 {
   "qa": [

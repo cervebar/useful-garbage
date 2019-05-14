@@ -1,0 +1,9 @@
+jakkakoliv xception s path
+
+Path doesn't exists
+vs
+Path (null) doesn't exist
+Path (my/wrong/path) doesn't exist
+Path (typo\path) doesn't exist
+
+TODO priklady:

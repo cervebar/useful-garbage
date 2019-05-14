@@ -18,5 +18,9 @@ local.properties
 .settings/
 .loadpath
 
-# MAC 
+# MAC
 .DS_Store
+
+# IDEA
+.idea
+*.iml

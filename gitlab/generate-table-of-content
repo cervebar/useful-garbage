@@ -1,0 +1,21 @@
+// quick and dirty snippet to creates a gitlab markdown table of contents for a README.md page
+// preview gitlab page and paste in browser console
+
+var str = "";
+$('.file-content')
+  .find('h1, h2, h3, h4, h5, h6, h7')
+  .each((i, node) => {
+    // node.tagName is H1 H2...
+    let indent = Number(node.tagName[1]) - 1;
+    // markdown mested lists are
+    // - xxx
+    //    - yyy etc
+    let tabs = '               '.substr(0, 3 * indent);
+    let linkName = node.textContent.trim();
+    let linkAnchor = node.querySelector('a').id;
+    str += `\n${tabs}- [${linkName}](#${linkAnchor})`;
+  });
+console.log(str);
+
+
+thanks: https://gist.github.com/gotofritz/605303b45d922a9d56e9328f95eee11a
