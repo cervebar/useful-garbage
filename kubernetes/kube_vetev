@@ -1,0 +1,34 @@
+# custom prompt (see https://misc.flogisoft.com/bash/tip_colors_and_formatting)
+function __prompt_command {
+  if [ $(pwd) != '/Users/marek.simunek/IdeaProjects/tools/kube-dex-login' ]
+  then
+      return 0
+  fi
+  local cluster=$(kubectl config current-context)
+  local namespace=$(kubectl config view --minify --output 'jsonpath={..namespace}' 2> /dev/null)
+
+  # fallback to default namespace
+  namespace="${namespace:-default}"
+
+  local color_default='\[\e[0;39m\]'
+  local color_green='\[\e[0;32m\]'
+  local color_red='\[\e[0;31m\]'
+  local reset_all='\[\e[0m\]'
+
+  # color kube info based on namespace
+  local kube_color
+  case $namespace in
+    ftxt-robot-dolores)
+      # production namespace
+      kube_color="${color_red}"
+      ;;
+    *)
+      kube_color="${color_green}"
+      ;;
+  esac
+
+  export PS1="\[${kube_color}(${namespace}@${cluster})${color_default} \w> ${reset_all}\]"
+}
+
+export PROMPT_COMMAND=__prompt_command
+
